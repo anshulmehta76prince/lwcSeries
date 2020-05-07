@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-tile label={contactdetails.Name} type="media">
+            <lightning-icon slot="media" icon-name="standard:groups"></lightning-icon>
+            <p class="slds-truncate">{contactdetails.Title}</p>
+           <button onclick={updateContactName}>Update Contact.name</button>
+        <!--     <button onclick={updateContact}>Update Contact</button> -->
+        </lightning-tile>
+    </div>
+</template>
