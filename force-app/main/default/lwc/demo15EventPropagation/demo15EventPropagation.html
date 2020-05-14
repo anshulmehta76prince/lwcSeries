@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Demo 15 Event Bubbling " icon-name="custom:custom14">
+        <lightning-layout class="slds-m-around_medium">
+        <lightning-layout-item onselected={contactSelected}>
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id}>
+                   <c-demo15-contact-details contactdetails={contact}></c-demo15-contact-details>
+                </div>
+            </template>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-m-left_medium">
+            <template if:true={selectedContact}>
+                Selected Contact is {selectedContact.Name} >>>> {selectedContact.Id}
+            </template>
+        </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
+
+<!-- 3 contacts , Child component is being initialized 3 times and if you use declarative approach , event listener-->

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Demo 14 Custom Event Demo : Programmatically " icon-name="custom:custom14">
+        <lightning-layout class="slds-m-around_medium">
+        <lightning-layout-item>
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id}>
+                   <c-demo14-contact-details contactdetails={contact}></c-demo14-contact-details>
+                </div>
+            </template>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-m-left_medium">
+            <template if:true={selectedContact}>
+                Selected Contact is {selectedContact.Name} >>>> {selectedContact.Id}
+            </template>
+        </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

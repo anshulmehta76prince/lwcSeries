@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Demo 16 All Contact List" icon-name="custom:custom14">
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id}>
+                   <c-demo16-contact-details contactdetails={contact}></c-demo16-contact-details>
+                </div>
+            </template>
+    </lightning-card>
+</template>
