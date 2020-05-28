@@ -3,7 +3,7 @@ import {fireEvent} from 'c/pubsub';
 import { CurrentPageReference } from 'lightning/navigation';
 
 export default class Demo16ContactDetails extends LightningElement {
-    @api contactdetails;
+    @api contactdetails = {Id: "1", Name: "Sahil" , Title: "Director"};
 
     @wire(CurrentPageReference)pageRef;
 

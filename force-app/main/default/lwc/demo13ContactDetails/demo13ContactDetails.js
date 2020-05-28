@@ -5,7 +5,10 @@ export default class Demo13ContactDetails extends LightningElement {
 
     selectHandler(event){
         console.log('Clicked');
-        const selectedEvent = new CustomEvent('selected', { detail: this.contactdetails.Id });
+        const message = this.contactdetails.Id;
+    //  const selectedEvent = new CustomEvent('selected', { detail: this.contactdetails.Id});
+        const selectedEvent = new CustomEvent('selected', { detail: { contactId: this.contactdetails.Id}});
+        console.log('Clicked'+JSON.stringify(selectedEvent));
         this.dispatchEvent(selectedEvent);
     }
 }

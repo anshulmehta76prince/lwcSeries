@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="contacts" type="List"/>
+    <aura:attribute name="selectedContact" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="Demo 29 Aura LWC compatibility and pass data from child to parent">
+         <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <ul>
+                    <aura:iteration items="{!v.contacts}" var="item">
+                        <li>
+                            <c:demo13ContactDetails contactdetails="{!item}" onselected="{!c.contactSelectedHandler}"></c:demo13ContactDetails>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                 Selected Contact Name is : {!v.selectedContact}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>	

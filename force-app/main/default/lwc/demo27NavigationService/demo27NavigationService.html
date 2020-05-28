@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Demo 27 Navigation Demo">
+        <lightning-button label="Navigate To Account Home Page" 
+            title="Non-primary action" 
+            onclick={navigatetohomepage} 
+            class="slds-m-left_x-small">
+        </lightning-button><br/>
+        <lightning-button label="Navigate To Account Record View" 
+            title="Non-primary action" 
+            onclick={navigateToAccount} 
+            class="slds-m-left_x-small">
+         </lightning-button><br/>
+         <lightning-button label="Navigate To Account Record Edit" 
+            title="Non-primary action" 
+            onclick={navigateToEdit} 
+            class="slds-m-left_x-small">
+         </lightning-button><br/>
+         <lightning-button label="Navigate To LWC Demo Tab" 
+            title="Non-primary action" 
+            onclick={navigateToContactTab} 
+            class="slds-m-left_x-small">
+        </lightning-button><br/>
+        <lightning-button label="Navigate To New Account Record" 
+            title="Non-primary action" 
+            onclick={navigateToNewAccount} 
+            class="slds-m-left_x-small">
+        </lightning-button><br/>
+        <lightning-button label="Navigate To New Contact Record with Default" 
+            title="Non-primary action" 
+            onclick={navigateToNewContactWithDefaults} 
+            class="slds-m-left_x-small">
+        </lightning-button><br/>
+        <lightning-button label="Navigate To Web Page" 
+            title="Non-primary action" 
+            onclick={navigateToWebPage} 
+            class="slds-m-left_x-small">
+        </lightning-button><br/>
+    </lightning-card>
+</template>
